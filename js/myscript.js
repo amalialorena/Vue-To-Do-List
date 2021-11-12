@@ -28,7 +28,7 @@ var app = new Vue ({
         newTask:"",
 
         newTaskObj: {
-            text:this.newTask,
+            text:"",
             done: false
         },
         tasks: [
@@ -54,7 +54,10 @@ var app = new Vue ({
 
     methods: {
         newTaskPush(){
-            this.tasks.push(this.newTaskObj)
+            this.newTaskObj.text = this.newTask;
+            this.tasks.push(this.newTaskObj);
+            console.log(this.newTask);
+            
         }
     }
 });
