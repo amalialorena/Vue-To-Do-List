@@ -20,3 +20,34 @@
             //e aggiungerà una classe al testo selezionato
 //creo l'input e un bottone
 //pusho il valore dell'input nell'array al click sul bottone
+
+var app = new Vue ({
+
+    el: "#list-container",
+
+    data: {
+        tasks: [
+            {
+                text: "Fare la spesa",
+                done: false
+            },
+            {
+                text: "Lavare i piatti",
+                done: true
+            },
+            {
+                text: "Passare l'aspirapolvere",
+                done: false
+            },
+            {
+                text: "Preparare la cena",
+                done: false
+            }
+
+        ]
+    },
+
+    methods: {
+
+    }
+});
