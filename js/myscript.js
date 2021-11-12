@@ -24,7 +24,6 @@
 var app = new Vue ({
 
     el: "#list-container",
-
     data: {
         tasks: [
             {
@@ -47,7 +46,5 @@ var app = new Vue ({
         ]
     },
 
-    methods: {
-
-    }
+    
 });

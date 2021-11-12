@@ -9,10 +9,13 @@
 </head>
 <body>
     <div id="list-container">
-        <div v-for="task, i in tasks" :key="i">
-            {{task.text}}
-            <span @click="">&#x02717</span>
-        </div>
+        <ul>
+            <li v-for="task, i in tasks" :key="i" :class="task.done ? 'overline' : '' ">
+                {{task.text}}
+                <span @click="task.done = true">&#x02717</span>
+            </li>
+        </ul>
+      
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
