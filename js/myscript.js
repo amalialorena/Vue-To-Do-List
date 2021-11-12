@@ -25,6 +25,12 @@ var app = new Vue ({
 
     el: "#list-container",
     data: {
+        newTask:"",
+
+        newTaskObj: {
+            text:this.newTask,
+            done: false
+        },
         tasks: [
             {
                 text: "Fare la spesa",
@@ -46,5 +52,9 @@ var app = new Vue ({
         ]
     },
 
-    
+    methods: {
+        newTaskPush(){
+            this.tasks.push(this.newTaskObj)
+        }
+    }
 });
