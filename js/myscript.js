@@ -21,16 +21,10 @@
 //creo l'input e un bottone
 //pusho il valore dell'input nell'array al click sul bottone
 
-var app = new Vue ({
-
+var app = new Vue({
     el: "#list-container",
     data: {
         newTask:"",
-
-        newTaskObj: {
-            text:"",
-            done: false
-        },
         tasks: [
             {
                 text: "Fare la spesa",
@@ -54,10 +48,14 @@ var app = new Vue ({
 
     methods: {
         newTaskPush(){
-            this.newTaskObj.text = this.newTask;
-            this.tasks.push(this.newTaskObj);
-            console.log(this.newTask);
-            
+            if(this.newTask !== "" && this.newTask !== ' '){
+                this.tasks.push({
+                    text: this.newTask,
+                    done: false
+                });
+                console.log(this.newTask);
+                this.newTask = "";
+            }
         }
     }
 });
